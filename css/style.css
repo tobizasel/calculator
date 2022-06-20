@@ -1,0 +1,96 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(to right, #7474bf, #348ac7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .calculator {
+  background-color: #023E8A;
+  width: 425px;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.8);
+}
+body .calculator .calculator-display {
+  background: #000;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 10px 10px 0 0;
+}
+body .calculator .calculator-display #display {
+  margin: 0;
+  padding: 30px;
+  font-size: 2.8rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: lighter;
+  overflow-x: auto;
+}
+body .calculator .buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+body .calculator .buttons button {
+  min-height: 50px;
+  font-size: 1.25rem;
+  font-family: "rubik" sans-serif;
+  font-weight: normal;
+  border: none;
+  border-radius: 5px;
+  background: #ADE8F4;
+  cursor: pointer;
+  user-select: none;
+}
+body .calculator .buttons button:hover {
+  filter: brightness(115%);
+}
+body .calculator .buttons button:active {
+  transform: translateY(5px);
+}
+body .calculator .buttons .decimal {
+  font-weight: bolder;
+}
+body .calculator .buttons .operator {
+  background-color: #118AB2;
+  font-size: 1.8rem;
+}
+body .calculator .buttons .equal-sign {
+  grid-column: -2;
+  grid-row: 2/span 4;
+  background-color: #06D6A0;
+}
+body .calculator .buttons #clear {
+  background-color: #F72585;
+  color: white;
+}
+@media screen and (max-width: 450px) {
+  body .calculator {
+    width: 90vw;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+
+/*# sourceMappingURL=style.css.map */

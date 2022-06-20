@@ -1,0 +1,117 @@
+$calculator-bg:#023E8A;
+$display-bg: #000;
+$display-color: #fff;
+$buttons-bg: #ADE8F4;
+$operators-color: #118AB2;
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(to right, #7474bf, #348ac7);
+    
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .calculator{
+        background-color: $calculator-bg;
+        width: 425px;
+        border-radius: 10px;
+        box-shadow: 0 5px 30px -5px #000c;
+    
+        .calculator-display{
+            background: $display-bg;
+            color: $display-color;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            border-radius: 10px 10px 0 0;
+
+
+            #display{
+                margin: 0;
+                padding: 30px;
+                font-size: 2.8rem;
+                font-family: 'Rubik', sans-serif;
+                font-weight: lighter;
+                overflow-x: auto;
+            }
+        }
+
+        .buttons{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+
+            button{
+                min-height: 50px;
+                font-size: 1.25rem;
+                font-family: 'rubik' sans-serif;
+                font-weight: normal;
+                border: none;
+                border-radius: 5px;
+                background: $buttons-bg;
+                cursor: pointer;
+                user-select: none;
+
+                &:hover{
+                    filter: brightness(115%);
+                }
+
+                &:active{
+                    transform: translateY(5px);
+                }
+            }
+
+            .decimal{
+                font-weight: bolder;
+            }
+
+            .operator{
+                background-color: $operators-color;
+                font-size: 1.8rem;
+            }
+            .equal-sign {
+                grid-column: -2;
+                grid-row: 2 / span 4;
+                background-color: #06D6A0;
+            }
+
+            #clear{
+                background-color: #F72585;
+                color: white;
+            }
+        }
+    
+    @media screen and (max-width:450px) {
+        width: 90vw;;
+    }
+    }
+
+}
+
+
+
+::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+
+    &:hover{
+        background-color: #a8bbbf;
+    }
+  }
